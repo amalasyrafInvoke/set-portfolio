@@ -7,8 +7,8 @@ body {
 
 :root {
   --primary-color: #38314f;
-  --secondary-color: #F7F0F5;
-  --primary-background-color: #776F8E;
+  --secondary-color: #f7f0f5;
+  --primary-background-color: #776f8e;
 }
 
 #navbarNav {
@@ -100,22 +100,7 @@ section {
 }
 
 .navbar-brand {
-  transition: all 5s;
   justify-content: flex-end;
-}
-
-.navbrand-ani {
-  animation-name: navBrandAni;
-  animation-duration: 5s;
-}
-
-@keyframes navBrandAni {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .navbar-brand img {
@@ -129,6 +114,15 @@ section {
 #top-left-fixed,
 #bottom-right-fixed {
   position: fixed;
+}
+
+#moving-line {
+  height: 2px;
+  width: 100px;
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 65px;
+  top: 15px;
 }
 
 .vertical-line {
@@ -153,7 +147,7 @@ section {
   color: var(--primary-color);
   position: fixed;
   left: 25px;
-  top:20px;
+  top: 20px;
 }
 
 .vertical-line-right {
@@ -246,7 +240,7 @@ section {
 
 #about-section {
   background-color: var(--primary-background-color);
-  color: #F7F0F5;
+  color: #f7f0f5;
   margin: 0;
   padding: 0;
 }
