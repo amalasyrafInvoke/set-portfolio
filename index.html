@@ -48,6 +48,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
     <!-- Fav Icon -->
     <link
       rel="apple-touch-icon"
@@ -150,19 +155,19 @@
             <a class="nav-link" href="#">--</a>
           </li>
           <li class="nav-item d-lg-none d-block">
-            <a class="nav-link" aria-current="page" href="#main-banner">Home</a>
+            <a onclick="toggleMenu()" class="nav-link" aria-current="page" href="#main-banner">Home</a>
             <div class="line"></div>
           </li>
           <li class="nav-item d-lg-none d-block">
-            <a class="nav-link" href="#about-section">About</a>
+            <a onclick="toggleMenu()" class="nav-link" href="#about-section">About</a>
             <div class="line"></div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio-section">Portfolio</a>
+            <a onclick="toggleMenu()" class="nav-link" href="#portfolio-section">Portfolio</a>
             <div class="line"></div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact-section">Contact</a>
+            <a onclick="toggleMenu()" class="nav-link" href="#contact-section">Contact</a>
             <div class="line"></div>
           </li>
           <li class="nav-item d-none d-lg-block">
@@ -200,7 +205,7 @@
 
         <section id="about-section">
           <div class="header-offset"></div>
-          <!-- <img id="header-pic" src="images/facewlaptop.png" alt="Header" /> -->
+          <img id="about-pic" src="images/facewlaptop.png" alt="Header" />
           <h1 class="text-center">Front-End Web Developer</h1>
           <h2 class="text-center">And an aspiring MERN stack developer</h2>
           <h6 class="text-center">
@@ -209,7 +214,7 @@
           </h6>
           <div class="container" id="about-text">
             <h3 class="text-center">Hi, I'm Amaluddin!</h3>
-            <p class="text-center">
+            <p>
               I'm a self taught programmer, who started my journey in
               programming world in late 2020. Mainly focusing in JavaScript, I
               primarily serve in Front-End Development, using technologies such
@@ -222,60 +227,113 @@
               and I can't wait to share my work with everyone!
             </p>
           </div>
+          <div class="header-offset"></div>
+        </section>
+        <section>
+          <div class="container">
+            <div id="skill">
+              <h3 class="text-center mb-5">Skills and Knowledge</h3>
+              <ul class="list-unstyled" id="skill-list">
+                <li>
+                  <i class="fab fa-html5 fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>HTML5</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-css3-alt fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>CSS</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-js-square fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>JavaScript</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-react fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>React</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-bootstrap fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>Bootstrap</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-node-js fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>NodeJs</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-database fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>MongoDB</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-python fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text"><h6>Python</h6></div>
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-github-square fa-6x mb-4"></i>
+                  <div class="middle">
+                    <div class="text">Git</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section id="portfolio-section">
           <div class="header-offset"></div>
           <div class="row text-center mb-5">
             <h3>Some of My Works</h3>
           </div>
-          <div class="row mb-5">
-            <div class="card">
+          <div class="row mb-5" id="portfolio-list-container">
+            <div class="portfolio-list">
               <img
-                src="assets/img/forests.jpeg"
-                class="card-img-top"
+                src="images/smileface.PNG"
+                class="portfolio-img"
                 alt="forests test"
               />
-              <div class="card-body">
-                <h5 class="card-title">Portfolio Website</h5>
-                <h6 class="card-text">
-                  Some quick description of the project here!
-                </h6>
+              <div class="portfolio-text">
+                <h5>Portfolio Website</h5>
+                <h6>Some quick description of the project here!</h6>
                 <a href="#" class="btn btn-primary w-auto">Github</a>
                 <a href="#" class="btn btn-primary w-auto">Project Site</a>
               </div>
             </div>
-            <div class="card">
+            <div class="portfolio-list">
               <img
-                src="assets/img/forests.jpeg"
-                class="card-img-top"
+                src="images/smileface.PNG"
+                class="portfolio-img"
                 alt="forests test"
               />
-              <div class="card-body">
-                <h5 class="card-title">Coursera Project: ConFusion</h5>
-                <h6 class="card-text">
-                  Some quick description of the project here
-                </h6>
+              <div class="portfolio-text">
+                <h5>Portfolio Website</h5>
+                <h6>Some quick description of the project here!</h6>
                 <a href="#" class="btn btn-primary w-auto">Github</a>
                 <a href="#" class="btn btn-primary w-auto">Project Site</a>
               </div>
             </div>
-            <div class="card">
+            <div class="portfolio-list">
               <img
-                src="assets/img/forests.jpeg"
-                class="card-img-top"
+                src="images/smileface.PNG"
+                class="portfolio-img"
                 alt="forests test"
               />
-              <div class="card-body">
-                <h5 class="card-title">A React Site</h5>
-                <h6 class="card-text">
-                  Some quick description of the project here
-                </h6>
-                <a
-                  href="#"
-                  class="btn btn-primary w-auto"
-                  onmouseover="cardButtonMouseOver(this)"
-                  >Github</a
-                >
+              <div class="portfolio-text">
+                <h5>Portfolio Website</h5>
+                <h6>Some quick description of the project here!</h6>
+                <a href="#" class="btn btn-primary w-auto">Github</a>
                 <a href="#" class="btn btn-primary w-auto">Project Site</a>
               </div>
             </div>
@@ -284,6 +342,11 @@
         <section id="contact-section">
           <div class="header-offset"></div>
           <div id="contact" class="text-center">
+            <h3 class="text-center">Reach Out To Me!</h3>
+            <p class="text-center">
+              If you have any questions or would like to enquire about me, drop
+              me an email!
+            </p>
             <div class="row">
               <div class="col-5 offset-1">
                 <h4>Drop me an Email and Let's Talk!</h4>
