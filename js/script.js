@@ -3,6 +3,15 @@ var navBarList = document.getElementById('menu-list');
 var navbarBrand = document.getElementById('navbarBrand');
 var menuImg = document.getElementById('menuImage');
 var contentHolder = document.getElementById('content-holder');
+
+var navLink = document.querySelectorAll('.nav-link');
+var mainBanner = document.getElementById('main-banner');
+var aboutSection = document.getElementById('about-section');
+console.log(aboutSection)
+var skillSection = document.getElementById('skill-section');
+var portfolioSection = document.getElementById('portfolio-section');
+var contactSection = document.getElementById('contact-section');
+
 var isMenuActive = false;
 var isScrolling = false;
 
@@ -36,28 +45,43 @@ function toggleMenu() {
 
 scrollStop(() => {
   navbarBrand.style.opacity = '1';
-})
+});
 
-function scrollStop (callback, refresh = 100) {
+function scrollStop(callback, refresh = 100) {
+  // Make sure a valid callback was provided
+  if (!callback || typeof callback !== 'function') return;
 
-	// Make sure a valid callback was provided
-	if (!callback || typeof callback !== 'function') return;
+  // Setup scrolling variable
+  let isScrolling;
 
-	// Setup scrolling variable
-	let isScrolling;
+  // Listen for scroll events
+  window.addEventListener(
+    'scroll',
+    function (event) {
+      navbarBrand.style.opacity = '0';
+      navbarBrand.style.transition = 'all 500ms';
 
-	// Listen for scroll events
-	window.addEventListener('scroll', function (event) {
+      // Clear our timeout throughout the scroll
+      window.clearTimeout(isScrolling);
 
-    navbarBrand.style.opacity = '0';
-    navbarBrand.style.transition = 'all 500ms';
+      // Set a timeout to run after scrolling ends
+      isScrolling = setTimeout(callback, refresh);
+    },
+    false
+  );
+}
 
-		// Clear our timeout throughout the scroll
-		window.clearTimeout(isScrolling);
+window.addEventListener('scroll', onScroll);
 
-		// Set a timeout to run after scrolling ends
-		isScrolling = setTimeout(callback, refresh);
+function onScroll(event) {
 
-	},false);
-
+  if (window.scrollY + 80 >= aboutSection.offsetTop && window.scrollY + 65 < aboutSection.offsetTop + aboutSection.clientHeight) {
+    navLink.forEach((list) => {
+      list.style.color = 'var(--secondary-color)';
+    });
+  } else {
+    navLink.forEach((list) => {
+      list.style.color = 'black';
+    });
+  }
 }
