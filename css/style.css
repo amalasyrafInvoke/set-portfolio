@@ -298,10 +298,12 @@ section {
 .portfolio-text {
   /* text-align: justify; */
   margin: 1rem 0;
+  padding: 30px;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   transition: all 0.5s;
 }
 
