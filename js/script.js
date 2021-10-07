@@ -95,11 +95,11 @@ function onScroll(event) {
   }
 }
 
-var movingLineInterval = setInterval(moveLine, 25);
+var movingLineInterval = setInterval(moveLine, 20);
 
 function moveLine() {
-  var x = 10;
-  var y = 10;
+  var x = 5;
+  var y = 5;
 
   if (iteration === 1) {
     movingBox.posX += x;
@@ -115,7 +115,7 @@ function moveLine() {
       setTimeout(() => {
         movingLine.style.width = `2px`;
         movingLine.style.height = `100px`;
-        setInterval(moveLine, 25);
+        movingLineInterval = setInterval(moveLine, 20);
       }, 100);
     }
     // return
@@ -136,7 +136,7 @@ function moveLine() {
       setTimeout(() => {
         movingLine.style.width = `100px`;
         movingLine.style.height = `2px`;
-        // setInterval(moveLine, 10);
+        movingLineInterval = setInterval(moveLine, 20);
       }, 100);
     }
       // return;
@@ -156,7 +156,7 @@ function moveLine() {
       setTimeout(() => {
         movingLine.style.width = `2px`;
         movingLine.style.height = `100px`;
-        // setInterval(moveLine, 10);
+        movingLineInterval = setInterval(moveLine, 20);
       }, 100);
     }
       // return;
@@ -176,7 +176,8 @@ function moveLine() {
       setTimeout(() => {
         movingLine.style.width = `100px`;
         movingLine.style.height = `2px`;
-        // setInterval(moveLine, 10);
+        // movingLine.style.display = 'none';
+        movingLineInterval = setInterval(moveLine, 25);
       }, 100);
     }
       // return;
