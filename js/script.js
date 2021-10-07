@@ -30,6 +30,14 @@ setTimeout(() => {
   });
 }, 10);
 
+const navBrandOnMouseOver = (x) => {
+  x.src = 'images/handsupface.PNG';
+};
+
+const navBrandOnMouseOut = (x) => {
+  x.src = 'images/winkface.PNG';
+};
+
 function toggleMenu() {
   if (isMenuActive) {
     navBarList.classList.remove('animate__fadeInRight');
