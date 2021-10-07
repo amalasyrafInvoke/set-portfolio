@@ -48,8 +48,8 @@ function toggleMenu() {
       navBarNav.style.display = 'none';
       navbarBrand.style.display = 'block';
     }, 750);
-    // document.querySelector('body').style.overflow = 'auto';
-    document.querySelector('html').style.overflow = 'auto';
+    document.querySelector('body').style.overflow = 'visible';
+    document.querySelector('html').style.overflow = 'visible';
     isMenuActive = false;
     return;
   } else {
@@ -59,7 +59,7 @@ function toggleMenu() {
     menuImg.classList.remove('animate__animated', 'animate__fadeOutTopRight');
     menuImg.classList.add('animate__animated', 'animate__fadeInTopRight');
     navbarBrand.style.display = 'none';
-    // document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('body').style.overflow = 'hidden';
     document.querySelector('html').style.overflow = 'hidden';
     isMenuActive = true;
     return;
