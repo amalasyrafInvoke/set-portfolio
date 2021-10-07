@@ -244,11 +244,9 @@ section {
   left: -50px;
 }
 
-#about-section {
+#about-section, #portfolio-section {
   background-color: var(--primary-background-color);
   color: #f7f0f5;
-  margin: 0;
-  padding: 0;
 }
 
 #about-pic {
@@ -284,13 +282,17 @@ section {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem 0;
+  font-family: var(--secondary-font-family);
 }
 
 .portfolio-img {
-  max-width: 500px;
+  max-width: 480px;
   width: 50vw;
+  background-color: var(--secondary-color);
   border: 0.5px solid var(--primary-color);
   margin: 1rem 0;
+  border-radius: 5px;
+  transition: all 0.1s ease-in;
 }
 
 .portfolio-text {
@@ -300,6 +302,36 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
+}
+
+.portfolio-list:hover {
+  cursor: pointer;
+}
+
+.portfolio-list:hover .portfolio-img {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.portfolio-list:hover .portfolio-text {
+  transform: scale(1.1);
+}
+
+#contact-section {
+  justify-content: center;
+  align-items: center;
+}
+
+#mail-btn {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  transition: 0.75s all ease-out;
+}
+
+#mail-btn:hover {
+  transform: scale(1.1);
 }
 
 @media (min-width: 576px) {

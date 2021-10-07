@@ -88,6 +88,14 @@ function onScroll(event) {
     navLink.forEach((list) => {
       list.style.color = 'var(--secondary-color)';
     });
+  } 
+  else if (
+    window.scrollY + 80 >= portfolioSection.offsetTop &&
+    window.scrollY + 65 < portfolioSection.offsetTop + portfolioSection.clientHeight
+  ) {
+    navLink.forEach((list) => {
+      list.style.color = 'var(--secondary-color)';
+    });
   } else {
     navLink.forEach((list) => {
       list.style.color = 'black';
