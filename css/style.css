@@ -283,6 +283,8 @@ section {
   justify-content: flex-start;
   margin: 1rem 0;
   font-family: var(--secondary-font-family);
+  color: inherit;
+  text-decoration: none;
 }
 
 .portfolio-img {
@@ -309,6 +311,7 @@ section {
 
 .portfolio-list:hover {
   cursor: pointer;
+  color: inherit;
 }
 
 .portfolio-list:hover .portfolio-img {
