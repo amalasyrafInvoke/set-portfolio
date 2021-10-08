@@ -342,8 +342,9 @@ section {
 
 @media (min-width: 576px) {
   #skill-list li {
-    width: calc(100% / 3);
+    width: calc(100% / 4);
     text-align: center;
+    margin-top: 1rem;
   }
 }
 
